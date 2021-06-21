@@ -1,0 +1,76 @@
+<RightPanel@BoxLayout>:
+	orientation: 'vertical'
+	canvas:
+    	Color:
+    		rgba: 255, 255, 255, 0.1
+    	Rectangle:
+    		pos: self.pos
+    		size: self.size
+    rows:2
+	Carousel:
+		id: 'caro'
+		orientation: 'horizontal'
+
+    	#size: self.size
+    	#text: 'button'
+		#background_normal: ''
+		#background_color: 0.8, 0, 0, 0.5  # 5% red
+	Button:
+    	size_hint_y: 0.3
+    	text: 'Информация о найденном'
+		background_normal: ''
+		background_color: 0.8, 0, 0, 0.5  # 5% red
+
+
+<MainWindow>:
+
+	kv_caro: 'caro'
+
+	FitImage:
+		size_hint_x: 1
+		size_hint_y: 1
+		source: 'img.jpg'
+		#source: 'https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/7VrRna8S3x6xbijooeBmxqvHXiu.jpg'
+	BoxLayout:
+		orientation: 'horizontal'
+		BoxLayout:
+			size_hint_x: 0.4
+			orientation: 'vertical'
+			canvas:
+		    	Color:
+		    		rgba: 0, 0, 0, 0.5
+		    	Rectangle:
+		    		pos: self.pos
+		    		size: self.size
+		    rows: 4
+		    BoxLayout:
+		    	orientation: 'horizontal'
+		    	size_hint_y: .05
+		    	cols: 2
+			    TextInput:
+			    	hint_text: 'Terminator'
+			    	#size: self.size
+			    	#text: 'button'
+					#background_normal: ''
+					#background_color: 0.8, 0, 0, 0.5  # 5% red
+				Button:
+					size_hint_x: .2
+					text: 'Find'
+					on_release:
+						root.add_caro('передаю...')
+
+			BoxLayout:
+				#background_normal: ''
+				#background_color: 0.8, 0, 0, 0.5  # 5% red
+		RightPanel:
+		#Button:
+		#	text: 'button'
+		#	background_normal: ''
+		#	background_color: 0.8, 0, 0, 0.5  # 5% red
+		
+		#TextInput:
+    	#	background_color: 1, 1, 1, 1
+    	#	size_hint: .5, .5
+    		#text: 'LABEL'
+    		#bold: True
+	

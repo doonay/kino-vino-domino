@@ -1,0 +1,2 @@
+python kino.py
+pause

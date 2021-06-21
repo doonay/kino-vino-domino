@@ -1,0 +1,2 @@
+python carousel.py
+pause
